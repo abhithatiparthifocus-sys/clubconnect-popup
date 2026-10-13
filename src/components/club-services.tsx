@@ -6,7 +6,9 @@ import { useContact } from './club-shell'
 
 export const clubServices = [
   { name: 'Dining & Hospitality', icon: Utensils, image: photos.dining, description: 'Gather for family meals, relaxed evenings and special occasions at the club’s bar and restaurant.', features: ['Restaurant & bar', 'Family dining', 'Social gatherings'] },
-  { name: 'Guest Accommodation', icon: BedDouble, image: photos.rooms, description: 'Enjoy well-appointed guest rooms with modern amenities and a welcoming atmosphere on the club campus.', features: ['Comfortable guest rooms', 'Modern amenities', 'Complimentary Wi-Fi'] },
+  { name: 'Guest Room Booking', icon: BedDouble, image: photos.rooms, description: 'Enquire about well-appointed guest rooms with modern amenities and a welcoming atmosphere on the club campus.', features: ['Comfortable guest rooms', 'Reservation enquiries', 'Complimentary Wi-Fi'] },
+  { name: 'Health Camp for Members', icon: HeartPulse, image: photos.gym, description: 'Discover the club’s member-focused health and fitness services, with cardio and resistance equipment and guidance from experienced trainers.', features: ['Member health & fitness', 'Cardio & resistance training', 'Trainer guidance'] },
+  { name: 'Entertainment', icon: CalendarDays, image: photos.gardens, description: 'Come together for live music, club events and shared evenings of entertainment. Contact the club for the current programme.', features: ['Live music', 'Social events', 'Community entertainment'] },
   { name: 'Events & Celebrations', icon: CalendarDays, image: photos.hall, description: 'Bring people together for weddings, receptions, conferences and family celebrations in elegant function spaces.', features: ['Function halls', 'Conferences & meetings', 'Family celebrations'] },
   { name: 'Sports & Recreation', icon: Trophy, image: photos.badminton, description: 'Find your favourite pursuit, from shuttle badminton and pickleball to billiards, snooker and precision shooting.', features: ['Shuttle badminton', 'GC Pavilion sports', 'Billiards & snooker'] },
   { name: 'Fitness & Wellness', icon: HeartPulse, image: photos.pool, description: 'Make time for yourself with the club’s swimming pool and air-conditioned gym and fitness centre.', features: ['Swimming pool', 'Gym & fitness centre', 'Everyday recreation'] },
@@ -16,7 +18,7 @@ export const clubServices = [
 export function ServicesSection() {
   return <section className="home-services" aria-labelledby="services-heading"><div className="page-width">
     <div className="section-heading"><div><p className="eyebrow">THOUGHTFUL HOSPITALITY</p><h2 id="services-heading">Services</h2></div><Button asChild variant="outline"><Link to="/services">Explore all services<ArrowUpRight/></Link></Button></div>
-    <div className="service-preview-grid">{clubServices.slice(0,3).map(service=><Link to="/services" key={service.name} className="service-preview"><service.icon size={26}/><h3>{service.name}</h3><p>{service.description}</p><span className="text-link">Discover more<ArrowUpRight size={16}/></span></Link>)}</div>
+    <div className="service-preview-grid">{clubServices.slice(1,4).map(service=><Link to="/services" key={service.name} className="service-preview"><service.icon size={26}/><h3>{service.name}</h3><p>{service.description}</p><span className="text-link">Discover more<ArrowUpRight size={16}/></span></Link>)}</div>
   </div></section>
 }
 
