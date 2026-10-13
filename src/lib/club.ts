@@ -11,6 +11,8 @@ import pavilion from '@/assets/pavilion.asset.json'
 import gardens from '@/assets/gardens.asset.json'
 import lounge from '@/assets/lounge.asset.json'
 import brochure from '@/assets/brochure.asset.json'
+import logo from '@/assets/logo.asset.json'
+export const clubLogo = logo.url
 export const photos = { club: club.url, aerial: aerial.url, dining: dining.url, badminton: badminton.url, pool: pool.url, gym: gym.url, rooms: rooms.url, hall: hall.url, play: play.url, pavilion: pavilion.url, gardens: gardens.url, lounge: lounge.url }
 export const brochureUrl = brochure.url
 export const address = 'Ratnagirinagar, Palakaluru Road, Opp. Vignan College, Guntur – 522 005'
