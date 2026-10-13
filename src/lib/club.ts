@@ -15,7 +15,7 @@ export const photos = { club: club.url, aerial: aerial.url, dining: dining.url, 
 export const brochureUrl = brochure.url
 export const address = 'Ratnagirinagar, Palakaluru Road, Opp. Vignan College, Guntur – 522 005'
 export function pageHead(title: string, description: string, image = photos.club) {
-  return { meta: [{title: `${title} | Guntur Club`}, {name:'description',content:description}, {property:'og:title',content:`${title} | Guntur Club`}, {property:'og:description',content:description}, {property:'og:type',content:'website'}, {name:'twitter:card',content:'summary_large_image'}, {property:'og:image',content:image}, {name:'twitter:image',content:image}] }
+  return { meta: [{title: `${title} | Guntur Club`}, {name:'description',content:description}, {property:'og:title',content:`${title} | Guntur Club`}, {property:'og:description',content:description}, {property:'og:type',content:'website'}, {name:'twitter:card',content:'summary_large_image'}, ...(image.startsWith('https://') ? [{property:'og:image',content:image}, {name:'twitter:image',content:image}] : [])] }
 }
 export const amenities = [
   {name:'Bar & Restaurant', category:'DINING & SOCIAL', image:photos.dining, copy:'Family meals, friendly gatherings and special occasions, served with exceptional hospitality.'},
