@@ -14,6 +14,7 @@ import { Route as AffiliationsRouteImport } from './routes/affiliations'
 import { Route as AmenitiesRouteImport } from './routes/amenities'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as HeritageRouteImport } from './routes/heritage'
+import { Route as ServicesRouteImport } from './routes/services'
 import { Route as StayCelebrateRouteImport } from './routes/stay-celebrate'
 
 const IndexRoute = IndexRouteImport.update({
@@ -41,6 +42,11 @@ const HeritageRoute = HeritageRouteImport.update({
   path: '/heritage',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StayCelebrateRoute = StayCelebrateRouteImport.update({
   id: '/stay-celebrate',
   path: '/stay-celebrate',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/amenities': typeof AmenitiesRoute
   '/contact': typeof ContactRoute
   '/heritage': typeof HeritageRoute
+  '/services': typeof ServicesRoute
   '/stay-celebrate': typeof StayCelebrateRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/amenities': typeof AmenitiesRoute
   '/contact': typeof ContactRoute
   '/heritage': typeof HeritageRoute
+  '/services': typeof ServicesRoute
   '/stay-celebrate': typeof StayCelebrateRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/amenities': typeof AmenitiesRoute
   '/contact': typeof ContactRoute
   '/heritage': typeof HeritageRoute
+  '/services': typeof ServicesRoute
   '/stay-celebrate': typeof StayCelebrateRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/amenities'
     | '/contact'
     | '/heritage'
+    | '/services'
     | '/stay-celebrate'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/amenities'
     | '/contact'
     | '/heritage'
+    | '/services'
     | '/stay-celebrate'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/amenities'
     | '/contact'
     | '/heritage'
+    | '/services'
     | '/stay-celebrate'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   AmenitiesRoute: typeof AmenitiesRoute
   ContactRoute: typeof ContactRoute
   HeritageRoute: typeof HeritageRoute
+  ServicesRoute: typeof ServicesRoute
   StayCelebrateRoute: typeof StayCelebrateRoute
 }
 
@@ -145,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HeritageRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/stay-celebrate': {
       id: '/stay-celebrate'
       path: '/stay-celebrate'
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   AmenitiesRoute: AmenitiesRoute,
   ContactRoute: ContactRoute,
   HeritageRoute: HeritageRoute,
+  ServicesRoute: ServicesRoute,
   StayCelebrateRoute: StayCelebrateRoute,
 }
 export const routeTree = rootRouteImport

@@ -7,7 +7,7 @@ import { ContactForm } from './contact-form'
 import { photos, address, brochureUrl, clubLogo } from '@/lib/club'
 const ContactContext = createContext(()=>{})
 export const useContact = ()=>useContext(ContactContext)
-const navigation = [{to:'/',label:'Home'},{to:'/heritage',label:'Our Heritage'},{to:'/amenities',label:'Amenities'},{to:'/stay-celebrate',label:'Stay & Celebrate'},{to:'/affiliations',label:'Affiliations'},{to:'/contact',label:'Contact'}] as const
+const navigation = [{to:'/',label:'Home'},{to:'/heritage',label:'Our Heritage'},{to:'/services',label:'Services'},{to:'/amenities',label:'Amenities'},{to:'/stay-celebrate',label:'Stay & Celebrate'},{to:'/affiliations',label:'Affiliations'},{to:'/contact',label:'Contact'}] as const
 export function ClubShell({children}:{children:ReactNode}) {
   const [open,setOpen]=useState(false)
   const [menu,setMenu]=useState(false)
