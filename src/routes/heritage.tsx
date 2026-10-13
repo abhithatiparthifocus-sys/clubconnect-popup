@@ -1,4 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { HeritagePage } from '@/components/club-pages'
 import { pageHead } from '@/lib/club'
-export const Route = createFileRoute('/heritage')({head:()=>pageHead('Our Heritage','Discover the history of Guntur Club, founded in 1929 as the English Club, and its 97-year legacy of prestige and fellowship.'),component:HeritagePage})
+export const Route = createFileRoute('/heritage')({head:()=>pageHead('About Us','Meet Guntur Club: explore our three-acre campus, 97-year history since 1929, community of over 1,700 members and managing committee.'),component:HeritagePage})

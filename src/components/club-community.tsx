@@ -3,9 +3,9 @@ import { ArrowLeft, ArrowRight, Quote } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { committeeMembers, memberTestimonials } from '@/lib/club'
 
-export function CommitteeSection() {
+export function CommitteeSection({ title = 'Committee Members' }: { title?: string }) {
   return <section className="committee-section" aria-labelledby="committee-heading"><div className="page-width">
-    <div className="section-heading"><div><p className="eyebrow">GUIDING OUR LEGACY</p><h2 id="committee-heading">Committee Members</h2><p className="section-description">The people entrusted with our club’s traditions and its next chapter.</p></div></div>
+    <div className="section-heading"><div><p className="eyebrow">GUIDING OUR LEGACY</p><h2 id="committee-heading">{title}</h2><p className="section-description">The people entrusted with our club’s traditions and its next chapter.</p></div></div>
     <div className="committee-grid">{committeeMembers.map(member=><article className="committee-member" key={member.name}><img src={member.image} alt={member.name} loading="lazy"/><h3>{member.name}</h3><p>{member.role}</p></article>)}</div>
   </div></section>
 }

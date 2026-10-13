@@ -8,3 +8,4 @@
 - [x] Review official website services, committee and testimonials.
 - [x] Add homepage Services, Committee Members and Testimonials sections.
 - [x] Add Services page and shared navigation, then verify desktop and mobile.
+- [x] Update About with statistics after the opening photo, an overview, history and managing committee; verify the page.

@@ -15,3 +15,4 @@
 - Use semantic global CSS tokens and the existing Button component for the editorial club design and its controls.
 - Reuse the original brochure logo through the shared club asset module in every brand placement, keeping the club identity consistent.
 - Keep service views and community sections in focused shared components; source public committee portraits and attributed testimonials from the official club website rather than inventing endorsements.
+- Reuse the club statistics display across Home and About, and retain About at /heritage so existing heritage links stay valid.
