@@ -5,3 +5,6 @@
 - [x] Verify navigation, mobile layout and enquiry storage.
 - [x] Replace the placeholder crest with the original brochure logo.
 - [x] Match website colors to the brochure and verify all pages.
+- [ ] Review official website services, committee and testimonials.
+- [ ] Add homepage Services, Committee Members and Testimonials sections.
+- [ ] Add Services page and shared navigation, then verify desktop and mobile.
