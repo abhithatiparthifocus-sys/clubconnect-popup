@@ -13,3 +13,4 @@
 - Keep brochure facts, asset pointers and leaf metadata helpers in the browser-safe club module to avoid inconsistent public content.
 - Store public contact enquiries through a validated server function; only the server service role can access enquiry rows, keeping visitor details private.
 - Use semantic global CSS tokens and the existing Button component for the editorial club design and its controls.
+- Reuse the original brochure logo through the shared club asset module in every brand placement, keeping the club identity consistent.
