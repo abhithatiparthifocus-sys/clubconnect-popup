@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AffiliationsRouteImport } from './routes/affiliations'
+import { Route as AmenitiesRouteImport } from './routes/amenities'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as HeritageRouteImport } from './routes/heritage'
+import { Route as StayCelebrateRouteImport } from './routes/stay-celebrate'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AffiliationsRoute = AffiliationsRouteImport.update({
+  id: '/affiliations',
+  path: '/affiliations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AmenitiesRoute = AmenitiesRouteImport.update({
+  id: '/amenities',
+  path: '/amenities',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HeritageRoute = HeritageRouteImport.update({
+  id: '/heritage',
+  path: '/heritage',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StayCelebrateRoute = StayCelebrateRouteImport.update({
+  id: '/stay-celebrate',
+  path: '/stay-celebrate',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/affiliations': typeof AffiliationsRoute
+  '/amenities': typeof AmenitiesRoute
+  '/contact': typeof ContactRoute
+  '/heritage': typeof HeritageRoute
+  '/stay-celebrate': typeof StayCelebrateRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/affiliations': typeof AffiliationsRoute
+  '/amenities': typeof AmenitiesRoute
+  '/contact': typeof ContactRoute
+  '/heritage': typeof HeritageRoute
+  '/stay-celebrate': typeof StayCelebrateRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/affiliations': typeof AffiliationsRoute
+  '/amenities': typeof AmenitiesRoute
+  '/contact': typeof ContactRoute
+  '/heritage': typeof HeritageRoute
+  '/stay-celebrate': typeof StayCelebrateRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/affiliations'
+    | '/amenities'
+    | '/contact'
+    | '/heritage'
+    | '/stay-celebrate'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/affiliations'
+    | '/amenities'
+    | '/contact'
+    | '/heritage'
+    | '/stay-celebrate'
+  id:
+    | '__root__'
+    | '/'
+    | '/affiliations'
+    | '/amenities'
+    | '/contact'
+    | '/heritage'
+    | '/stay-celebrate'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AffiliationsRoute: typeof AffiliationsRoute
+  AmenitiesRoute: typeof AmenitiesRoute
+  ContactRoute: typeof ContactRoute
+  HeritageRoute: typeof HeritageRoute
+  StayCelebrateRoute: typeof StayCelebrateRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +117,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/affiliations': {
+      id: '/affiliations'
+      path: '/affiliations'
+      fullPath: '/affiliations'
+      preLoaderRoute: typeof AffiliationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/amenities': {
+      id: '/amenities'
+      path: '/amenities'
+      fullPath: '/amenities'
+      preLoaderRoute: typeof AmenitiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/heritage': {
+      id: '/heritage'
+      path: '/heritage'
+      fullPath: '/heritage'
+      preLoaderRoute: typeof HeritageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stay-celebrate': {
+      id: '/stay-celebrate'
+      path: '/stay-celebrate'
+      fullPath: '/stay-celebrate'
+      preLoaderRoute: typeof StayCelebrateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AffiliationsRoute: AffiliationsRoute,
+  AmenitiesRoute: AmenitiesRoute,
+  ContactRoute: ContactRoute,
+  HeritageRoute: HeritageRoute,
+  StayCelebrateRoute: StayCelebrateRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
