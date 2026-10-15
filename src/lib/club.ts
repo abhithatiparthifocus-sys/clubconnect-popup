@@ -69,7 +69,7 @@ import play from "@/assets/guntur-play.jpg";
 import pavilion from "@/assets/guntur-pavilion.jpg";
 import gardens from "@/assets/guntur-gardens.jpg";
 import lounge from "@/assets/guntur-play.jpg";
-
+import brochure from "@/assets/brochure.pdf.pdf"
 import logo from "@/assets/guntur-club-logo.png";
 import president from "@/assets/committee-vpr.jpg";
 import secretary from "@/assets/committee-cr.jpg";
@@ -103,7 +103,7 @@ export const photos = {
   lounge,
 };
 
-export const brochureUrl = pool;
+export const brochureUrl = brochure;
 
 export const address = "Ratnagirinagar, Palakaluru Road, Opp. Vignan College, Guntur – 522 005";
 
