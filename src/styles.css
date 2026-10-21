@@ -2150,3 +2150,161 @@ html {
   position: fixed;
   z-index: 1001;
 }
+
+/* Responsive typography: keep supporting text comfortable at every width. */
+body {
+  font-size: 16px;
+}
+
+.eyebrow {
+  font-size: 11px;
+}
+
+.main-nav a {
+  font-size: 15px;
+}
+
+.header-contact,
+.hero-button,
+.hero-outline-button,
+.contact-band button,
+.filter-row button {
+  font-size: 13px;
+}
+
+.hero-description,
+.welcome-copy p,
+.experience-item > p,
+.pavilion-copy > p:not(.eyebrow),
+.inner-hero p:not(.eyebrow),
+.editorial > p:not(.eyebrow),
+.amenity-item > p:not(.eyebrow),
+.stay-row p:not(.eyebrow),
+.section-description,
+.contact-page > div > p:not(.eyebrow),
+.contact-details p,
+.contact-details > a,
+.service-detail-body > p,
+.testimonial-card-quote {
+  font-size: 15px;
+}
+
+.hero-bottom {
+  font-size: 10px;
+}
+
+.legacy-stats > div > span,
+.footer-top p,
+.footer-top > div > a:not(.footer-brand) {
+  font-size: 13px;
+}
+
+.experience-item > p,
+.amenity-item > p:not(.eyebrow),
+.stay-row p:not(.eyebrow),
+.service-detail-body > p {
+  line-height: 1.7;
+}
+
+@media (min-width: 641px) and (max-width: 1100px) {
+  .main-nav a {
+    font-size: 13px;
+  }
+
+  .header-contact {
+    font-size: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(64px, 8vw, 78px);
+  }
+
+  .hero-tagline {
+    font-size: clamp(38px, 5vw, 44px);
+  }
+
+  .inner-hero h1 {
+    font-size: clamp(52px, 7vw, 64px);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  .eyebrow,
+  .hero-content .eyebrow {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .topline {
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+
+  .topline a {
+    font-size: 10px;
+  }
+
+  .header-contact,
+  .hero-button,
+  .hero-outline-button,
+  .contact-band button,
+  .filter-row button {
+    font-size: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(54px, 14vw, 63px);
+  }
+
+  .hero-tagline {
+    font-size: clamp(32px, 9vw, 37px);
+  }
+
+  .hero-description,
+  .welcome-copy p,
+  .experience-item > p,
+  .pavilion-copy > p:not(.eyebrow),
+  .inner-hero p:not(.eyebrow),
+  .editorial > p:not(.eyebrow),
+  .amenity-item > p:not(.eyebrow),
+  .stay-row p:not(.eyebrow),
+  .section-description,
+  .contact-page > div > p:not(.eyebrow),
+  .contact-details p,
+  .contact-details > a,
+  .service-detail-body > p,
+  .testimonial-card-quote {
+    font-size: 15px;
+  }
+
+  .hero-bottom {
+    font-size: 9px;
+  }
+
+  .legacy-stats > div > span,
+  .footer-top p,
+  .footer-top > div > a:not(.footer-brand) {
+    font-size: 12px;
+  }
+
+  .section-heading .text-link,
+  .amenity-item button,
+  .text-link,
+  .testimonials-cta {
+    font-size: 12px;
+  }
+
+  .contact-form label {
+    font-size: 13px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 14px;
+  }
+}
