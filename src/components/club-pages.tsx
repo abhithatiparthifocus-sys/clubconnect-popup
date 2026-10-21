@@ -23,8 +23,8 @@ export function HomePage() {
       <section className="home-hero">
         <img
           className="hero-image"
-          src={photos.club}
-          alt="The illuminated Guntur Club building at sunset"
+          src={photos.gardensHero}
+          alt="Guntur Club's handcrafted metal bull sculpture in the gardens"
         />
         <div className="hero-shade" />
         <div className="hero-content">
@@ -260,6 +260,7 @@ function ClubStats({
 
 
 export function HeritagePage() {
+  const contact = useContact();
   return (
     <>
       <PageIntro
@@ -289,42 +290,38 @@ export function HeritagePage() {
           </p>
         </div>
       </section>
-      <section className="experiences-section" aria-labelledby="history-heading">
+      <section className="heritage-history" aria-labelledby="history-heading">
         <div className="page-width">
-          <p className="eyebrow">OUR HISTORY · SINCE 1929</p>
+          <p className="eyebrow">MILESTONES IN OUR JOURNEY</p>
           <h2 id="history-heading">
-            A distinguished past.
-            <br />
-            <em>An exceptional future.</em>
+            Time moves on. <em>Our spirit endures.</em>
           </h2>
-          <p className="section-description">
-            Founded in 1929 during the British era as the famed English Club, Guntur Club began as
-            an exclusive gathering place for senior officials and dignitaries. Today, it stands as
-            one of the region’s respected institutions for recreation, sports, culture and community
-            bonding.
-          </p>
-          <img
-            className="wide-photo"
-            src={photos.aerial}
-            alt="The three-acre Guntur Club campus"
-            loading="lazy"
-          />
-          <div className="heritage-columns">
+          <div className="history-milestones">
+            <article className="history-milestone">
+              <p className="history-year">1929</p>
+              <h3>A formal beginning</h3>
+              <p>Registered under the Companies Act, establishing the foundations of a lasting institution.</p>
+            </article>
+            <article className="history-milestone">
+              <p className="history-year">1977</p>
+              <h3>A community comes together</h3>
+              <p>After a devastating cyclone, members’ donations and contributions helped restore the club.</p>
+            </article>
+            <article className="history-milestone">
+              <p className="history-year">1998</p>
+              <h3>A new home, the same heart</h3>
+              <p>The club moved to its present 2.75-acre property, opening a new chapter in its story.</p>
+            </article>
+          </div>
+          <div className="history-cta">
             <div>
-              <h3>A legacy of fellowship</h3>
-              <p>
-                For nearly a century, the club has nurtured a tradition of friendship and belonging,
-                connecting members through a shared appreciation for community life.
-              </p>
+              <p className="eyebrow">YOUR NEXT CHAPTER</p>
+              <h3>There’s a place for you here.</h3>
             </div>
-            <div>
-              <h3>Towards 100 years of excellence</h3>
-              <p>
-                From our English Club beginnings to contemporary facilities such as GC Pavilion, we
-                continue to bring cherished traditions and new experiences together as we approach
-                our centenary.
-              </p>
-            </div>
+            <Button onClick={contact} size="lg">
+              Enquire about membership
+              <ArrowUpRight />
+            </Button>
           </div>
         </div>
       </section>

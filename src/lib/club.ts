@@ -68,6 +68,7 @@ import hall from "@/assets/guntur-hall.jpg";
 import play from "@/assets/guntur-play.jpg";
 import pavilion from "@/assets/guntur-pavilion.jpg";
 import gardens from "@/assets/guntur-gardens.jpg";
+import gardensHero from "@/assets/gardens-hero.jpg";
 import lounge from "@/assets/guntur-play.jpg";
 import brochure from "@/assets/brochure.pdf.pdf"
 import logo from "@/assets/guntur-club-logo.png";
@@ -100,6 +101,7 @@ export const photos = {
   play,
   pavilion,
   gardens,
+  gardensHero,
   lounge,
 };
 
